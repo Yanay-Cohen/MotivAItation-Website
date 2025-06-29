@@ -1,0 +1,68 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #121212;
+  padding: 0 2rem;
+  height: 64px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Logo wrapper (left-aligned) */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo image */
+.logo-img {
+  height: 150px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Center navigation links */
+.navbar-center {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-left: 1rem; /* shifts all links right */
+}
+
+/* Each nav link */
+.nav-link {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-size: 1rem;
+}
+
+.nav-link:hover {
+  color: #f97316;
+}
+
+/* Account icon on the far right */
+.navbar-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.account-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #444;
+  border: 2px solid #666;
+}

@@ -1,0 +1,36 @@
+/* Make navbar flush to the top and full width */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 24px;
+  background-color: #1b1b1b;
+  border-bottom: 1px solid #333;
+  width: 98%;
+}
+
+/* Logo is bigger but uses flex to stay vertically centered */
+.logo {
+  height: 150px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Push right content all the way to the edge */
+.navbar-right {
+  margin-left: auto;
+}
+
+.account-circle {
+  width: 32px;
+  height: 32px;
+  background-color: #444;
+  border-radius: 50%;
+}
