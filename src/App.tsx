@@ -7,6 +7,8 @@ import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
 import './App.css';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 
 const App: React.FC = () => {
   return (
@@ -19,6 +21,8 @@ const App: React.FC = () => {
           <Route path="/download" element={<Download />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsOfService />} />  
         </Routes>
       </div>
     </Router>

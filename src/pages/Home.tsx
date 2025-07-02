@@ -72,8 +72,10 @@ export default function Home() {
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8, delay: 1.2 }}
 >
-  <p>© {new Date().getFullYear()} MotivAItion — Built with 💡 </p>
+  <p>© {new Date().getFullYear()} MotivAItion. All rights reserved.</p>
   <nav>
+    <Link to="/download" className="footer-link">Download</Link> |{' '}
+    <Link to="/contact" className="footer-link">Contact</Link> |{' '}
     <Link to="/privacy" className="footer-link">Privacy Policy</Link> |{' '}
     <Link to="/terms" className="footer-link">Terms of Service</Link>
   </nav>
