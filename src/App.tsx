@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 import './App.css';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
+import './index.css'; // Import global styles
 
 const App: React.FC = () => {
   return (
