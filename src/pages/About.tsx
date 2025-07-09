@@ -2,123 +2,56 @@ import './Home.css'; // Reuse same styles for consistency
 import { motion } from 'framer-motion';
 import FeatureImg1 from '../assets/feature1.png';
 import FeatureImg2 from '../assets/feature2.png';
+import Footer from '../components/Footer';
 
 export default function About() {
   return (
     <main className="home-wrapper about-page">
-
       {/* Hero Section */}
-      <motion.section
-        className="hero-section"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
+      <motion.section className="hero-section" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
         <h1>
           What is{' '}
-          <span className="highlight">
-            Motiv<span className="ai-highlight">AI</span>tion
-          </span>
-          ?
+          <span className="highlight">Motiv<span className="ai-highlight">AI</span>tion</span>?
         </h1>
-        <p className="uvp">
-          Your daily dose of motivation powered by AI. Automate your goals, stay focused, and celebrate your wins — intelligently.
-        </p>
+        <p className="uvp">Your daily dose of motivation powered by AI. Automate your goals, stay focused, and celebrate your wins — intelligently.</p>
       </motion.section>
-
       {/* Feature Section 1 */}
-      <motion.section
-        className="features-preview"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-      >
+      <motion.section className="features-preview" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
         <div className="features-grid">
-          <motion.div
-            className="feature-item about-feature"
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-          >
+          <motion.div className="feature-item about-feature" initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 0.4 }}>
             <img src={FeatureImg1} alt="Smart Goal Planning" className="feature-image" />
           </motion.div>
-          <motion.div
-            className="feature-item about-feature"
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
-          >
+          <motion.div className="feature-item about-feature" initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 0.5 }}>
             <h2>Smart Goal Planning</h2>
-            <p>
-              Break big dreams into achievable steps with AI-backed planning.
-              Get personalized prompts and plans to guide you forward.
-            </p>
+            <p>Break big dreams into achievable steps with AI-backed planning. Get personalized prompts and plans to guide you forward.</p>
           </motion.div>
         </div>
       </motion.section>
-
       {/* Feature Section 2 */}
-      <motion.section
-        className="features-preview"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-      >
+      <motion.section className="features-preview" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }}>
         <div className="features-grid reverse">
-          <motion.div
-            className="feature-item about-feature"
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.6 }}
-          >
+          <motion.div className="feature-item about-feature" initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 0.6 }}>
             <img src={FeatureImg2} alt="Progress Tracking" className="feature-image" />
           </motion.div>
-          <motion.div
-            className="feature-item about-feature"
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.7 }}
-          >
+          <motion.div className="feature-item about-feature" initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 0.7 }}>
             <h2>Progress You Can See</h2>
-            <p>
-              Log achievements, track consistency, and get AI feedback on your journey.
-              See your progress unfold clearly.
-            </p>
+            <p>Log achievements, track consistency, and get AI feedback on your journey. See your progress unfold clearly.</p>
           </motion.div>
         </div>
       </motion.section>
-
-      {/* Feature Section 3 */}
-<motion.section
-  className="features-preview"
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, delay: 0.4 }}
->
-  <div className="features-grid">
-    <motion.div
-      className="feature-item about-feature"
-      initial={{ opacity: 0, x: -30 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.7, delay: 0.6 }}
-    >
-      <img src={FeatureImg2} alt="Motivational Boosts" className="feature-image" />
-    </motion.div>
-    <motion.div
-      className="feature-item about-feature"
-      initial={{ opacity: 0, x: 30 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.7, delay: 0.7 }}
-    >
-      <h2>Daily AI Motivation</h2>
-      <p>
-        Wake up to daily encouragement generated by your goals and habits.
-        Let AI inspire your momentum every morning.
-      </p>
-    </motion.div>
-  </div>
-</motion.section>
-
+      {/* Feature Section 3 (remove bottom margin/padding) */}
+      <motion.section className="features-preview" style={{ marginBottom: 0, paddingBottom: 0 }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
+        <div className="features-grid">
+          <motion.div className="feature-item about-feature" initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 0.6 }}>
+            <img src={FeatureImg2} alt="Motivational Boosts" className="feature-image" />
+          </motion.div>
+          <motion.div className="feature-item about-feature" initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.7, delay: 0.7 }}>
+            <h2>Daily AI Motivation</h2>
+            <p>Wake up to daily encouragement generated by your goals and habits. Let AI inspire your momentum every morning.</p>
+          </motion.div>
+        </div>
+      </motion.section>
+      <Footer />
     </main>
   );
 }
