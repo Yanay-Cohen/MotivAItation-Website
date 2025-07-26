@@ -1,8 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// ✅ Set the correct base for GitHub Pages
 export default defineConfig({
-  base: '/MotivAItation-Website/',  // <-- this line fixes it!
+  base: '/MotivAItation-Website/', // ✅ Critical: tells Vite the site is in a subfolder
   plugins: [react()],
 })
