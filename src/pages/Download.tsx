@@ -1,13 +1,29 @@
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { useEffect } from 'react';
 
 export default function Download() {
+  useEffect(() => {
+    const originalBodyOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = originalBodyOverflow;
+    };
+  }, []);
   return (
     <>
+      <style>{`
+        html, body, #root, .home-wrapper, main {
+          overflow: hidden !important;
+          height: 100vh !important;
+        }
+      `}</style>
       <Navbar />
-      <main className="home-wrapper min-h-screen flex flex-col">
+      <main className="home-wrapper min-h-screen flex flex-col justify-between">
         <section className="features-preview" style={{ padding: '2rem 1rem', background: 'transparent', marginTop: 0 }}>
-          <h1 className="text-4xl font-extrabold text-blue-400 mb-2 text-center">Download MotivAItion</h1>
+          <h1 className="text-4xl font-extrabold text-blue-400 mb-2 text-center">
+            Download Motiv<span className="ai-highlight">AI</span>tion
+          </h1>
           <p className="text-lg text-gray-300 mb-10 text-center max-w-xl mx-auto">
             Get MotivAItion on your favorite platform. Choose your device below to get started!
           </p>
@@ -47,7 +63,6 @@ export default function Download() {
             </div>
           </div>
         </section>
-        <div className="flex-1" />
         <Footer />
       </main>
     </>
